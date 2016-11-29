@@ -6,21 +6,25 @@ public class Triangulo{
 		
 		
 		System.out.println("Introduce los lados");
-		float lado = teclado.nextFloat(); 
+		double lado = teclado.nextFloat(); 
 		
-		float perimetro =perimetroTrianguloEquilatero(lado);
+		double perimetro =perimetroTrianguloEquilatero(lado);
+		double area=areaTrianguloEquilatero(lado);
 		
 		System.out.printf("El perimetro del triangulo es %.2f\n",perimetro);
+		System.out.printf("El area del triangulo es %.2f%n",area);
 		      
 
 
  }
-    public static float perimetroTrianguloEquilatero(float lado){
+    public static double perimetroTrianguloEquilatero(double lado){
 		return 3 * lado;
 		
       	
 	}
-	
+	public static double areaTrianguloEquilatero(double lado){
+		return Math.sqrt(3) / 4 * lado * lado;	
+	}
 }
 		
        
